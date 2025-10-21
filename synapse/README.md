@@ -51,7 +51,7 @@
 ## ⚙️ Installation
 
 ```bash
-# Cloner le repo github
+# Cloner le repo github.com
 git clone https://github.com/Quentindurant/Synapse-CRM.git
 
 # Lancer Prisma
