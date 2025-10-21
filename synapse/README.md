@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 Synapse CRM — Module ADV — V0.0.0 -
+> Les **ADV** (Administration des Ventes) gèrent tout le cycle administratif et commercial des prestations
+> Elles coordonnent **les partenaires**, **techniciens** et **clients** pour assurer le bon déroulement des installations et interventions.
+> Elles garantissent le **suivi**, la **conformité** et la **traçabilité** des dossiers jusqu’à leur clôture.
+---
 
-## Getting Started
+## 🚀 Fonctionnalités principales
 
-First, run the development server:
+### 📄 Informations administratives
+ 
+ - N° dossier / référence interne
+ - Nom du client, société, contact, téléphone, email
+ - Adresse d’installation
+ - Partenaire associé (VIP Telecom, HighCom, etc.)
+
+### ⚙️ Informations techniques
+
+ - Type de prestation (installation, maintenance, migration, portabilité…)
+ - Matériel concerné (poste IP, routeur, PABX, etc.)
+ - Date d’intervention prévue et durée estimée
+ - Technicien assigné
+ - Notes internes
+
+### 💬 Suivi / Statut
+
+ - En attente, planifié, en cours, terminé, à facturer, clos
+ - Historique des modifications
+ - Signature technicien + PV intervention
+ - Liens vers les tickets support liés (si besoin)
+
+### 💰 Informations commerciales
+
+ - Partenaire
+ - Commande client associée
+ - Montant facturé
+ - Statut de facturation (non facturé, en cours, payé)
+
+---
+
+## 🏗️ Stack technique
+
+- **Backend :** Nest.js
+- **ORM :** Prisma
+- **Base de données :** PostgreSQL
+- **Auth :** JWT (avec rôles)
+- **Tests :** cypress - Postman (et d'autre ?)
+- **CI/CD :** GitHub Actions
+
+---
+
+## ⚙️ Installation
 
 ```bash
+# Cloner le repo
+git clone https://github.com/Quentindurant/Synapse-CRM.git
+
+# Lancer Prisma
+npx prisma migrate dev
+
+# Démarrer le serveur
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
